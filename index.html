@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Green flag / Red flag</title>
+  <title>Vrai /faux</title>
   <style>
     :root{
       --green:#17d46b;
@@ -103,13 +103,13 @@
 <body>
   <div class="top">
     <div class="pill" id="clock">--:--</div>
-    <div class="pill" id="status">Green flag -- d’accord</div>
+    <div class="pill" id="status">Vrai -- d’accord</div>
   </div>
 
   <div class="box">
     <div class="emoji" id="emoji">🟢</div>
-    <h1 id="title">Green flag</h1>
-    <p class="sub" id="msg">Je suis d’accord. On peut avancer.</p>
+    <h1 id="title">Vrai</h1>
+    <p class="sub" id="msg">Je suis d’accord.</p>
 
     <div class="btnRow">
       <button class="btnGreen" type="button" onclick="setGreen()">🟢 D’accord</button>
@@ -121,17 +121,17 @@
     function setGreen(){
       document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--green');
       document.getElementById('emoji').textContent = '🟢';
-      document.getElementById('title').textContent = 'Green flag';
-      document.getElementById('msg').textContent = "Je suis d’accord. AVANCE!";
-      document.getElementById('status').textContent = "Green flag -- d’accord";
+      document.getElementById('title').textContent = 'Vrai';
+      document.getElementById('msg').textContent = "Je suis d’accord. ";
+      document.getElementById('status').textContent = "Vrai -- d’accord";
     }
 
     function setRed(){
       document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--red');
       document.getElementById('emoji').textContent = '🔴';
-      document.getElementById('title').textContent = 'Red flag';
+      document.getElementById('title').textContent = 'Faux';
       document.getElementById('msg').textContent = "Je ne suis pas d’accord.";
-      document.getElementById('status').textContent = "Red flag -- pas d’accord";
+      document.getElementById('status').textContent = "Faux -- pas d’accord";
     }
 
     function tick(){
